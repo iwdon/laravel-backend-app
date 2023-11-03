@@ -17,27 +17,32 @@ Route::get('/', function () {
     //return view('welcome');
     return view('pages.blank-page',['type_menu'=>'']);
 });
-
-Route::get('/login', function () {
-    //return view('welcome');
-    return view('auth.login',['type_menu'=>'']);
+Route::middleware(['auth'])->group(function(){
+    Route::get('home', function(){
+    return view ('pages.blank-page',['type_menu'=>'']);
+    })->name('home');
 });
 
-Route::get('/register', function () {
+//Route::get('/login', function () {
     //return view('welcome');
-    return view('auth.register',['type_menu'=>'']);
-}); 
+    //return view('auth.login',['type_menu'=>'']);
+//});
 
-Route::get('/forgot', function () {
+//Route::get('/register', function () {
     //return view('welcome');
-    return view('auth.forgot',['type_menu'=>'']);
-});
-Route::get('/reset', function () {
-    //return view('welcome');
-    return view('auth.reset',['type_menu'=>'']);
-});
+  //  return view('auth.register',['type_menu'=>'']);
+//}); 
 
-Route::get('/verify', function () {
+//Route::get('/forgot', function () {
     //return view('welcome');
-    return view('auth.verify',['type_menu'=>'']);
-});
+  //  return view('auth.forgot',['type_menu'=>'']);
+//});
+//Route::get('/reset', function () {
+    //return view('welcome');
+  //  return view('auth.reset',['type_menu'=>'']);
+//});
+
+//Route::get('/verify', function () {
+    //return view('welcome');
+  //  return view('auth.verify',['type_menu'=>'']);
+//});
