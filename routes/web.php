@@ -25,7 +25,7 @@ Route::middleware(['auth'])->group(function(){
 
 //Route::get('/login', function () {
     //return view('welcome');
-    //return view('auth.login',['type_menu'=>'']);
+    //return view('auth.login',['type_menu'=>'']);;;
 //});
 
 //Route::get('/register', function () {
