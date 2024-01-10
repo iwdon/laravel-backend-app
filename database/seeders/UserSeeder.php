@@ -24,14 +24,14 @@ class UserSeeder extends Seeder
         'bio'=>'flutter laravel',
         'password' =>Hash::make('123456',)
        ]);
-       User::factory(5)->create();
+
        User::create([
         'name'=>'Super Admin',
         'email'=>'superadmin@gmail.com',
         'email_verified_at'=> now(),
         'role'=>'superadmin',
         'phone'=>'085227600925',
-        'bio'=>'laravel dev',
+        'bio'=>'laravel developer',
         'password' =>Hash::make('12345678',)
        ]);
     }
